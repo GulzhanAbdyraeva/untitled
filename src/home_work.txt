@@ -1,0 +1,151 @@
+CREATE TABLE pilot(
+    id INT UNIQUE,
+    name VARCHAR(50),
+    email VARCHAR (30) UNIQUE,
+    age INT NOT NULL
+
+);
+INSERT INTO pilot(id, name, email, age)
+VALUES (1,'Gulzhan','gulzhan@mail.com',20);
+
+CREATE TABLE pilot2(
+    id INT UNIQUE NOT NULL ,
+    name VARCHAR(20) NOT NULL ,
+    experienceOfWork INT NOT NULL,
+    age INT
+);
+INSERT INTO pilot2(id,name,experienceOfWork,age)
+VALUES (2,'Steve',20, 45);
+
+CREATE TABLE buyer(
+    name VARCHAR NOT NULL ,
+    last_name VARCHAR,
+    id INT PRIMARY KEY ,
+    age INT NOT NULL ,
+    password VARCHAR (150)
+);
+INSERT INTO buyer(name, last_name, id, age, password)
+VALUES ('Mark', 'Steve', 12829, 32, 'AD2VASE12-EWF');
+
+CREATE TABLE buyer2(
+                      name VARCHAR NOT NULL ,
+                      last_name VARCHAR,
+                      id INT PRIMARY KEY ,
+                      age INT NOT NULL ,
+                      password VARCHAR (150)
+);
+INSERT INTO buyer(name, last_name, id, age, password)
+VALUES ('Artur', 'Pendragon', 2134, 28, 'ASC-32-EWF');
+
+CREATE TABLE animal (
+                       name VARCHAR NOT NULL ,
+                       nick_name VARCHAR,
+                       number INT PRIMARY KEY ,
+                       age INT NOT NULL ,
+                       color VARCHAR (150)
+);
+INSERT INTO animal(name, nick_name, number, age, color)
+VALUES ('Cat', 'City', 4, 1, 'black');
+
+CREATE TABLE student(
+                      id INT UNIQUE,
+                      name VARCHAR(20) NOT NULL ,
+                      email VARCHAR (30) UNIQUE,
+                      age INT NOT NULL,
+                      sex Char (1)
+);
+INSERT INTO student(id, name, email, age, sex)
+VALUES (1,'Azes','szed@mail.com',22,'f');
+
+CREATE TABLE phone(
+             id INT UNIQUE ,
+             name VARCHAR ,
+             yearOfCreate INT NOT NULL,
+             color VARCHAR NOT NULL ,
+             model VARCHAR (50)
+
+);
+INSERT INTO phone(id,name,yearOfCreate,color,model)
+VALUES (245,'Samsung M31',2019, 'white','Samsung');
+
+CREATE TABLE person(
+    name VARCHAR,
+    yearOfBirthday INT NOT NULL ,
+    nation VARCHAR UNIQUE ,
+    sex CHAR NOT NULL ,
+    age INT
+);
+INSERT INTO person(name, yearOfBirthday, nation, sex, age)
+VALUES ('Sezim', 1997, 'Kyrgyz', 'f', 18);
+
+CREATE TABLE monkey(
+    nick_name VARCHAR,
+    year INT UNIQUE NOT NULL ,
+    country VARCHAR,
+    sex CHAR,
+    age INT
+);
+INSERT INTO person(name, yearOfBirthday, nation, sex, age)
+VALUES ('Mika',2015, 'Africa','m', 5);
+
+CREATE TABLE laptop(
+    price INT NOT NULL ,
+    model VARCHAR ,
+    madeIn CHAR (20) NOT NULL ,
+    year INT UNIQUE ,
+    color VARCHAR NOT NULL
+);
+INSERT INTO laptop(price, model, madeIn, year, color)
+VALUES (45000, 'Lenovo','Chine', 2012, 'red');
+
+CREATE TABLE movie(
+    name VARCHAR UNIQUE ,
+    yearOfDebut INT NOT NULL ,
+    made VARCHAR NOT NULL ,
+    actor VARCHAR NOT NULL ,
+    director VARCHAR UNIQUE
+);
+INSERT INTO movie(name, yearOfDebut, made, actor, director)
+VALUES ('Titanic',1998, 'America', 'Leonardo Di Caprio', 'Kevin F.');
+
+
+CREATE TABLE dog (
+                        name VARCHAR NOT NULL ,
+                        nick_name VARCHAR,
+                        whatKindOfDog VARCHAR NOT NULL ,
+                        age INT NOT NULL ,
+                        color VARCHAR (150)
+);
+INSERT INTO dog(name, nick_name, whatKindOfDog, age, color)
+VALUES ('Dog', 'Rody', 'ChiHuaHua', 3, 'black');
+
+CREATE TABLE country(
+    name VARCHAR NULL ,
+    language VARCHAR NOT NULL ,
+    center VARCHAR UNIQUE ,
+    population INT UNIQUE ,
+    national_food VARCHAR UNIQUE
+);
+INSERT INTO country(name, language, center, population, national_food)
+VALUES ('Germany', 'Deautch','Berlin', 45.000000, 'Beer');
+
+CREATE TABLE headphone(
+    model VARCHAR (40) NOT NULL ,
+    made VARCHAR ,
+    year INT NOT NULL ,
+    color VARCHAR (15) NOT NULL ,
+    kind VARCHAR
+);
+INSERT INTO headphone(model, made, year, color, kind)
+VALUES ('SamsungDX', 'Korea', 2021, 'Blue', 'wireless');
+
+CREATE TABLE mountain(
+    name VARCHAR NOT NULL ,
+    height DOUBLE PRECISION,
+    county VARCHAR (42),
+    area DOUBLE PRECISION,
+    nick_name VARCHAR
+
+);
+INSERT INTO mountain(name, height, county, area, nick_name)
+VALUES ('Everest', 9000, 'China', 234213, 'Eve');
